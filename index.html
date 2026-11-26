@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>www.by38777.com_视频品牌与原创影像社区_短片纪录片直播</title>
+<meta name="description" content="www.by38777.com 是聚焦原创影像与视频品牌的社区首页，收录短片、纪录片、幕后花絮、直播栏目与创作者访谈，提供条目看点、更新动态、深度解析与常见问题解答，适合影像爱好者与内容创作者浏览参考。">
+<meta name="keywords" content="原创短片,纪录片栏目,幕后花絮,影像创作者,直播栏目">
+<style>
+:root{
+  --ink:#12141a;
+  --ink-2:#2b2f3a;
+  --muted:#5f6675;
+  --line:#e3e6ee;
+  --bg:#f6f7fb;
+  --panel:#ffffff;
+  --brand:#1f3ad6;
+  --brand-2:#0f1f8a;
+  --accent:#ff5a3c;
+  --accent-2:#ffd84d;
+  --ok:#0f9d6b;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow:0 1px 2px rgba(18,20,26,.05),0 8px 24px rgba(18,20,26,.06);
+  --shadow-lg:0 12px 40px rgba(18,20,26,.12);
+  --announce-h:38px;
+  --header-h:64px;
+  --offset:calc(var(--announce-h) + var(--header-h) + 12px);
+  --max:1320px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* ---------- 吸顶公告条 ---------- */
+.announce{
+  position:sticky;top:0;z-index:60;
+  height:var(--announce-h);
+  background:linear-gradient(90deg,var(--brand-2),var(--brand) 55%,#3b57ff);
+  color:#fff;
+  display:flex;align-items:center;
+  font-size:13px;
+  overflow:hidden;
+}
+.announce .wrap{
+  max-width:var(--max);margin:0 auto;padding:0 20px;width:100%;
+  display:flex;align-items:center;gap:12px;
+}
+.announce .dot{
+  width:8px;height:8px;border-radius:50%;background:var(--accent-2);
+  box-shadow:0 0 0 4px rgba(255,216,77,.22);flex:none;
+}
+.announce .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;letter-spacing:.2px}
+.announce .txt b{color:var(--accent-2);font-weight:700}
+.announce .more{margin-left:auto;flex:none;font-weight:600;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:1px}
+.announce .more:hover{border-color:#fff}
+
+/* ---------- 页头 ---------- */
+.site-header{
+  position:sticky;top:var(--announce-h);z-index:55;
+  height:var(--header-h);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .wrap{
+  max-width:var(--max);margin:0 auto;padding:0 20px;height:100%;
+  display:flex;align-items:center;gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text strong{font-size:16.5px;letter-spacing:.2px;font-weight:800}
+.brand-text span{font-size:11px;color:var(--muted);letter-spacing:1.6px;font-weight:500}
+.nav-main{display:flex;align-items:center;gap:2px;margin-left:6px}
+.nav-main a{
+  font-size:14px;color:var(--ink-2);padding:8px 11px;border-radius:8px;font-weight:500;
+  white-space:nowrap;transition:background .15s,color .15s;
+}
+.nav-main a:hover{background:#eef1fb;color:var(--brand)}
+.header-tools{margin-left:auto;display:flex;align-items:center;gap:10px}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:190px;height:36px;border:1px solid var(--line);border-radius:20px;
+  padding:0 36px 0 14px;font-size:13px;background:#f8f9fd;color:var(--ink);
+  transition:border-color .15s,background .15s,width .2s;
+}
+.search-box input:focus{background:#fff;border-color:var(--brand);outline:none;width:220px}
+.search-box button{
+  position:absolute;right:4px;width:28px;height:28px;border:0;background:var(--brand);
+  border-radius:50%;display:grid;place-items:center;color:#fff;
+}
+.search-box button svg{width:14px;height:14px}
+.btn-ghost{
+  height:36px;padding:0 15px;border-radius:20px;border:1px solid var(--line);
+  background:#fff;font-size:13px;font-weight:600;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px;
+}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.menu-toggle{display:none;width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:9px;align-items:center;justify-content:center}
+.menu-toggle svg{width:18px;height:18px}
+
+/* ---------- 布局 ---------- */
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+.layout{
+  display:grid;
+  grid-template-columns:186px minmax(0,1fr) 268px;
+  gap:26px;
+  align-items:start;
+  padding:26px 0 10px;
+}
+section[id],div[id].anchor{scroll-margin-top:var(--offset)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:radial-gradient(120% 140% at 82% 0%,#3b57ff 0%,#1f2bb0 42%,#101a63 100%);
+  color:#fff;
+}
+.hero .wrap{max-width:var(--max);margin:0 auto;padding:52px 20px 58px;display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:40px;align-items:center}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;
+  padding:5px 12px;border-radius:20px;background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.22);letter-spacing:.3px;
+}
+.hero h1{
+  font-size:clamp(30px,4vw,46px);margin:18px 0 0;letter-spacing:-.5px;font-weight:800;
+  word-break:break-word;
+}
+.hero .lead{
+  margin-top:16px;font-size:15.5px;line-height:1.85;color:rgba(255,255,255,.86);max-width:640px;
+}
+.hero .lead b{color:var(--accent-2);font-weight:700}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn-primary{
+  height:44px;padding:0 24px;border-radius:24px;border:0;background:var(--accent);
+  color:#fff;font-size:14.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;
+  box-shadow:0 8px 22px rgba(255,90,60,.34);transition:transform .15s,box-shadow .15s;
+}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(255,90,60,.42)}
+.btn-line{
+  height:44px;padding:0 22px;border-radius:24px;border:1px solid rgba(255,255,255,.42);
+  background:rgba(255,255,255,.06);color:#fff;font-size:14.5px;font-weight:600;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.hero-stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.hero-stats div{display:flex;flex-direction:column}
+.hero-stats strong{font-size:22px;font-weight:800;letter-spacing:-.3px}
+.hero-stats span{font-size:12.5px;color:rgba(255,255,255,.66);margin-top:2px}
+.hero-visual{position:relative;align-self:stretch;min-height:320px}
+.hero-card{
+  position:absolute;border-radius:16px;overflow:hidden;
+  box-shadow:0 20px 44px rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.16);
+}
+.hero-card img{width:100%;height:100%;object-fit:cover}
+.hc-1{width:64%;aspect-ratio:4/3;top:0;right:0;transform:rotate(2.5deg)}
+.hc-2{width:46%;aspect-ratio:3/4;left:0;bottom:0;transform:rotate(-3deg)}
+.hero-badge{
+  position:absolute;right:14px;bottom:12px;z-index:3;
+  background:rgba(9,12,32,.82);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:10px 14px;
+  display:flex;align-items:center;gap:10px;font-size:12.5px;
+}
+.hero-badge .play{width:26px;height:26px;border-radius:50%;background:var(--accent);display:grid;place-items:center;flex:none}
+.hero-badge .play svg{width:11px;height:11px;fill:#fff}
+.hero-badge strong{display:block;font-size:13px;font-weight:700}
+.hero-badge span{color:rgba(255,255,255,.66);font-size:11.5px}
+
+/* ---------- 左侧频道栏 ---------- */
+.side-left{position:sticky;top:var(--offset)}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.panel-head{
+  padding:13px 15px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+}
+.panel-head h2,.panel-head h3{font-size:13.5px;font-weight:800;letter-spacing:.4px}
+.panel-head .mark{font-size:11px;color:var(--muted);font-weight:500}
+.chan-list{padding:8px}
+.chan-list a{
+  display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;
+  font-size:13.5px;color:var(--ink-2);font-weight:500;transition:background .15s,color .15s;
+}
+.chan-list a:hover{background:#eef1fb;color:var(--brand)}
+.chan-list a .ico{
+  width:22px;height:22px;border-radius:6px;background:#eef1fb;color:var(--brand);
+  display:grid;place-items:center;flex:none;font-size:11px;font-weight:800;
+}
+.chan-list a .cnt{margin-left:auto;font-size:11px;color:var(--muted);font-weight:500}
+.side-note{
+  margin-top:14px;padding:14px;border-radius:var(--radius);
+  background:linear-gradient(150deg,#101a63,#1f3ad6);color:#fff;
+}
+.side-note h3{font-size:13px;margin-bottom:6px}
+.side-note p{font-size:12px;color:rgba(255,255,255,.78);line-height:1.7}
+.side-note a{
+  display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:12px;font-weight:700;
+  color:var(--accent-2);
+}
+
+/* ---------- 主内容通用 ---------- */
+.main-col{min-width:0;display:flex;flex-direction:column;gap:26px}
+.block{padding:22px}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.block-head h2{font-size:19px;letter-spacing:-.2px}
+.block-head h2 em{font-style:normal;color:var(--brand)}
+.block-head .sub{font-size:12.5px;color:var(--muted);margin-top:4px}
+.block-head .link{font-size:12.5px;color:var(--brand);font-weight:600;white-space:nowrap}
+.block-head .link:hover{text-decoration:underline}
+
+/* 概览 */
+.overview p{font-size:14.5px;line-height:1.9;color:var(--ink-2);margin-bottom:12px}
+.overview p:last-child{margin-bottom:0}
+.overview .hl{background:linear-gradient(transparent 62%,#ffe9a8 62%);font-weight:600;color:var(--ink)}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s,border-color .16s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#c9d2f5}
+.card .thumb{position:relative;aspect-ratio:4/3;background:#e9ecf5;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.card:hover .thumb img{transform:scale(1.045)}
+.card .badge{
+  position:absolute;left:9px;top:9px;padding:2px 9px;border-radius:20px;
+  font-size:11px;font-weight:700;background:rgba(9,12,32,.78);color:#fff;backdrop-filter:blur(4px);
+}
+.card .score{
+  position:absolute;right:9px;bottom:9px;padding:2px 8px;border-radius:6px;
+  font-size:11.5px;font-weight:800;background:var(--accent-2);color:#3a2a00;
+}
+.card .body{padding:12px 13px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .body h3{font-size:14.5px;line-height:1.45;font-weight:700}
+.card .body .desc{font-size:12.5px;color:var(--muted);line-height:1.72;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tags span{
+  font-size:11px;padding:2px 8px;border-radius:5px;background:#eef1fb;color:#39406b;font-weight:500;
+}
+.card .meta{display:flex;align-items:center;gap:10px;font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+.card .meta b{color:var(--accent);font-weight:700}
+
+/* 动态列表 */
+.updates{display:flex;flex-direction:column;gap:0}
+.update-item{
+  display:flex;gap:14px;padding:12px 2px;border-bottom:1px dashed var(--line);
+  align-items:flex-start;
+}
+.update-item:last-child{border-bottom:0}
+.update-item .time{
+  flex:none;width:74px;font-size:11.5px;color:var(--muted);font-weight:600;
+  padding-top:2px;font-variant-numeric:tabular-nums;
+}
+.update-item .txt{font-size:13.5px;line-height:1.7;color:var(--ink-2)}
+.update-item .txt strong{color:var(--ink);font-weight:700}
+.update-item .txt .tag-new{
+  display:inline-block;font-size:10.5px;font-weight:800;color:#fff;background:var(--ok);
+  border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:1px;
+}
+.update-item .txt a{color:var(--brand);font-weight:600}
+.update-item .txt a:hover{text-decoration:underline}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat{
+  border:1px solid var(--line);border-radius:11px;padding:13px 13px 14px;background:#fbfcff;
+  transition:border-color .15s,background .15s,transform .15s;display:block;
+}
+.cat:hover{border-color:var(--brand);background:#fff;transform:translateY(-2px)}
+.cat strong{display:block;font-size:14px;font-weight:800;margin-bottom:3px}
+.cat span{font-size:11.5px;color:var(--muted);line-height:1.6;display:block}
+.cat em{
+  font-style:normal;display:inline-block;margin-top:8px;font-size:11px;font-weight:700;color:var(--brand);
+}
+.cat-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.cat-filter button{
+  border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;
+  font-size:12.5px;font-weight:600;color:var(--ink-2);
+}
+.cat-filter button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+
+/* 深度解析 */
+.article h2{font-size:21px;margin-bottom:6px}
+.article .kicker{font-size:12.5px;color:var(--muted);margin-bottom:18px}
+.article h3{
+  font-size:16px;margin:22px 0 9px;padding-left:11px;border-left:4px solid var(--brand);
+  line-height:1.4;
+}
+.article p{font-size:14.5px;line-height:1.92;color:var(--ink-2);margin-bottom:11px}
+.article ul{margin:6px 0 14px;padding-left:0}
+.article ul li{
+  position:relative;padding-left:18px;font-size:14px;line-height:1.85;color:var(--ink-2);margin-bottom:6px;
+}
+.article ul li::before{
+  content:"";position:absolute;left:4px;top:.72em;width:6px;height:6px;border-radius:50%;
+  background:var(--brand);opacity:.55;
+}
+.article .quote{
+  margin:16px 0;padding:14px 18px;border-radius:11px;background:#f2f5ff;
+  border-left:4px solid var(--accent);font-size:14px;color:var(--ink-2);line-height:1.85;
+}
+.compare{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13px}
+.compare th,.compare td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.compare th{background:#f2f5ff;font-weight:700;font-size:12.5px;color:var(--ink)}
+.compare td{color:var(--ink-2);line-height:1.7}
+.compare tr:nth-child(even) td{background:#fbfcff}
+
+/* 体验指南 步骤 */
+.steps{counter-reset:step;display:flex;flex-direction:column;gap:12px}
+.step{
+  counter-increment:step;display:flex;gap:14px;padding:14px 16px;border-radius:12px;
+  background:#fbfcff;border:1px solid var(--line);
+}
+.step::before{
+  content:counter(step,decimal-leading-zero);flex:none;
+  font-size:15px;font-weight:800;color:var(--brand);letter-spacing:-.5px;
+  width:34px;height:34px;border-radius:9px;background:#eef1fb;display:grid;place-items:center;
+}
+.step h4{font-size:14.5px;margin-bottom:4px}
+.step p{font-size:13px;color:var(--muted);line-height:1.8}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line);border-radius:11px;margin-bottom:10px;background:#fff;
+  overflow:hidden;
+}
+.faq details[open]{border-color:#c9d2f5;box-shadow:var(--shadow)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:13px 44px 13px 15px;position:relative;
+  font-size:14px;font-weight:700;color:var(--ink-2);line-height:1.6;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:15px;top:50%;transform:translateY(-50%);
+  font-size:19px;font-weight:700;color:var(--brand);line-height:1;
+}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 15px 14px;font-size:13.5px;line-height:1.85;color:var(--muted)}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.comment{
+  border:1px solid var(--line);border-radius:11px;padding:12px 14px;background:#fbfcff;
+  display:flex;flex-direction:column;gap:7px;
+}
+.comment .who{display:flex;align-items:center;gap:8px}
+.comment .avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:11.5px;font-weight:800;color:#fff;background:var(--brand);
+}
+.comment .who strong{font-size:12.5px;font-weight:700}
+.comment .who span{font-size:11px;color:var(--muted);margin-left:auto}
+.comment p{font-size:12.8px;line-height:1.78;color:var(--ink-2)}
+.comment .on{font-size:11px;color:var(--brand);font-weight:600}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:14px}
+.news-item{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:start}
+.news-item img{width:150px;height:100px;object-fit:cover;border-radius:9px}
+.news-item h3{font-size:14.5px;line-height:1.5;margin-bottom:5px}
+.news-item h3 a:hover{color:var(--brand)}
+.news-item .date{font-size:11.5px;color:var(--muted);font-weight:600;margin-bottom:3px}
+.news-item p{font-size:12.8px;color:var(--muted);line-height:1.75}
+
+/* 相关推荐 标签索引 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{
+  display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:20px;
+  padding:6px 14px;font-size:12.8px;font-weight:600;color:var(--ink-2);background:#fff;
+  transition:border-color .15s,color .15s,background .15s;
+}
+.rec-tags a:hover{border-color:var(--brand);color:var(--brand);background:#f6f8ff}
+.rec-tags a .n{font-size:11px;color:var(--muted);font-weight:500}
+
+/* 榜单 */
+.rank-list{display:flex;flex-direction:column}
+.rank-item{display:flex;align-items:center;gap:13px;padding:11px 2px;border-bottom:1px dashed var(--line)}
+.rank-item:last-child{border-bottom:0}
+.rank-no{
+  flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+  font-size:12.5px;font-weight:800;background:#eef1fb;color:var(--ink-2);
+}
+.rank-item:nth-child(1) .rank-no{background:var(--accent);color:#fff}
+.rank-item:nth-child(2) .rank-no{background:#ff9a3c;color:#fff}
+.rank-item:nth-child(3) .rank-no{background:var(--accent-2);color:#4a3600}
+.rank-item .info{min-width:0;flex:1}
+.rank-item .info strong{display:block;font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-item .info span{font-size:11.5px;color:var(--muted)}
+.rank-item .num{font-size:12px;font-weight:800;color:var(--brand);flex:none}
+
+/* ---------- 右辅助栏 ---------- */
+.side-right{display:flex;flex-direction:column;gap:18px;position:sticky;top:var(--offset)}
+.mini-list{padding:6px 8px 10px}
+.mini-list li{border-bottom:1px dashed var(--line)}
+.mini-list li:last-child{border-bottom:0}
+.mini-list a{display:block;padding:9px 6px;border-radius:8px;transition:background .15s}
+.mini-list a:hover{background:#f2f5ff}
+.mini-list strong{display:block;font-size:13px;font-weight:700;line-height:1.5}
+.mini-list span{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}
+.side-search{padding:12px}
+.side-search .field{display:flex;gap:6px}
+.side-search input{
+  flex:1;min-width:0;height:34px;border:1px solid var(--line);border-radius:8px;padding:0 10px;font-size:12.5px;background:#f8f9fd;
+}
+.side-search input:focus{outline:none;border-color:var(--brand);background:#fff}
+.side-search button{height:34px;padding:0 13px;border-radius:8px;border:0;background:var(--brand);color:#fff;font-size:12.5px;font-weight:700}
+.hint{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+.hint.err{color:var(--accent)}
+.timeline{padding:12px 16px 16px}
+.tl-item{position:relative;padding:0 0 15px 18px;border-left:2px solid var(--line)}
+.tl-item:last-child{border-left-color:transparent;padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-6px;top:4px;width:10px;height:10px;border-radius:50%;
+  background:var(--brand);border:2px solid #fff;box-shadow:0 0 0 1px var(--brand);
+}
+.tl-item time{font-size:11px;color:var(--muted);font-weight:700;display:block;margin-bottom:2px}
+.tl-item strong{font-size:12.5px;display:block;line-height:1.5}
+.tl-item span{font-size:11.5px;color:var(--muted);display:block;margin-top:1px}
+
+/* ---------- 页尾 ---------- */
+.site-footer{margin-top:34px;background:#0d1020;color:rgba(255,255,255,.72);padding:44px 0 26px}
+.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.footer-brand .brand-text strong{color:#fff}
+.footer-brand .brand-text span{color:rgba(255,255,255,.42)}
+.footer-brand p{font-size:12.8px;line-height:1.85;margin-top:14px;color:rgba(255,255,255,.56);max-width:300px}
+.footer-col h4{font-size:13px;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul a{font-size:12.8px;color:rgba(255,255,255,.6)}
+.footer-col ul a:hover{color:var(--accent-2)}
+.footer-bottom{
+  margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12px;color:rgba(255,255,255,.42);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1180px){
+  .layout{grid-template-columns:186px minmax(0,1fr);}
+  .side-right{display:none}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero .wrap{grid-template-columns:minmax(0,1fr) 340px}
+}
+@media (max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr);}
+  .side-left{position:static;order:2}
+  .main-col{order:1}
+  .side-left .chan-list{display:flex;flex-wrap:wrap;gap:6px;padding:10px}
+  .side-left .chan-list a{flex:1 1 150px;border:1px solid var(--line);background:#fbfcff}
+  .side-note{display:none}
+  .nav-main{display:none}
+  .menu-toggle{display:inline-flex}
+  .header-tools .search-box input{width:150px}
+  .header-tools .search-box input:focus{width:170px}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:28px}
+  .hero-visual{min-height:250px;max-width:460px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:26px}
+  .nav-main.open{
+    display:flex;position:absolute;top:var(--header-h);left:0;right:0;flex-direction:column;
+    background:#fff;border-bottom:1px solid var(--line);padding:10px 16px 16px;gap:2px;
+    box-shadow:var(--shadow-lg);align-items:stretch;
+  }
+  .nav-main.open a{padding:11px 10px;font-size:14.5px}
+}
+@media (max-width:740px){
+  :root{--announce-h:34px;--header-h:58px}
+  .container{padding:0 14px}
+  .hero .wrap{padding:34px 14px 40px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .comment-grid{grid-template-columns:1fr}
+  .news-item{grid-template-columns:1fr}
+  .news-item img{width:100%;height:150px}
+  .header-tools .search-box{display:none}
+  .btn-ghost.hide-sm{display:none}
+  .block{padding:16px}
+  .brand-text span{display:none}
+  .update-item .time{width:60px;font-size:11px}
+  .footer-top{grid-template-columns:1fr}
+  .hero-visual{min-height:210px}
+  .compare{font-size:12px}
+  .compare th,.compare td{padding:7px 8px}
+  .announce .txt{font-size:12px}
+  .announce .more{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce" id="announce">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <p class="txt">本周新增 <b>14 条</b> 原创短片档案 · 冬季纪录长片《雪线之上》11 月 24 日全集上线 · 11 月 26 日 20:00 创作者连线直播</p>
+    <a class="more" href="/#updates">查看更新</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="www.by38777.com 首页">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="11" fill="#1f3ad6"/>
+        <path d="M15 12.5v15l13-7.5-13-7.5Z" fill="#ffd84d"/>
+        <path d="M9 9.5h4" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+        <path d="M9 30.5h4" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+      </svg>
+      <span class="brand-text">
+        <strong>www.by38777.com</strong>
+        <span>BY VIDEO STUDIO</span>
+      </span>
+    </a>
+
+    <nav class="nav-main" id="navMain" aria-label="主导航">
+      <a href="/#overview">影像概览</a>
+      <a href="/#featured">精选短片</a>
+      <a href="/#updates">更新动态</a>
+      <a href="/#channels">频道分类</a>
+      <a href="/#article">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="search-box">
+        <input type="search" id="topSearch" placeholder="搜索条目或频道" aria-label="站内搜索">
+        <button type="button" id="topSearchBtn" aria-label="搜索">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="m13.5 13.5 3.5 3.5"/></svg>
+        </button>
+      </div>
+      <a class="btn-ghost hide-sm" href="/#rank">本周榜单</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="navMain">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-tag">● 原创影像厂牌 · 2026 冬季片单开放</span>
+      <h1>www.by38777.com</h1>
+      <p class="lead">这里是 BY 影像工作室的官方影像社区：收录 <b>原创短片</b>、<b>纪录长片</b>、<b>幕后花絮</b>、<b>直播栏目</b> 与创作者访谈五条内容线，每周固定更新条目档案，从 3 分钟实验短片到 90 分钟雪线纪录，都能按类型、时长与更新状态逐条查阅。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#featured">
+          浏览精选短片
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h11M11 5.5l4.5 4.5L11 14.5"/></svg>
+        </a>
+        <a class="btn-line" href="/#guide">第一次观看指南</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>1,286</strong><span>在库影像条目</span></div>
+        <div><strong>92</strong><span>签约创作者</span></div>
+        <div><strong>每周四</strong><span>直播栏目更新</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card hc-1">
+        <img src="https://picsum.photos/seed/by38777-hero-doc01/400/300" width="400" height="300" alt="雪线之上纪录长片封面" loading="eager">
+      </div>
+      <div class="hero-card hc-2">
+        <img src="https://picsum.photos/seed/by38777-hero-short02/400/600" width="400" height="600" alt="深夜列车实验短片竖版海报" loading="eager">
+      </div>
+      <div class="hero-badge">
+        <span class="play"><svg viewBox="0 0 10 12"><path d="M0 0v12l10-6L0 0Z"/></svg></span>
+        <span><strong>《雪线之上》第 4 集</strong><span>11 月 24 日 · 4K 全集</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="layout">
+
+    <!-- 左侧频道索引 -->
+    <aside class="side-left">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>频道索引</h2>
+          <span class="mark">12 个</span>
+        </div>
+        <nav class="chan-list" aria-label="频道索引">
+          <a href="/#channels"><span class="ico">短</span>原创短片<span class="cnt">412</span></a>
+          <a href="/#channels"><span class="ico">纪</span>纪录长片<span class="cnt">186</span></a>
+          <a href="/#channels"><span class="ico">幕</span>幕后花絮<span class="cnt">238</span></a>
+          <a href="/#channels"><span class="ico">直</span>直播栏目<span class="cnt">96</span></a>
+          <a href="/#channels"><span class="ico">访</span>创作者访谈<span class="cnt">74</span></a>
+          <a href="/#channels"><span class="ico">实</span>实验影像<span class="cnt">61</span></a>
+          <a href="/#channels"><span class="ico">动</span>动画短片<span class="cnt">88</span></a>
+          <a href="/#channels"><span class="ico">城</span>城市影像志<span class="cnt">57</span></a>
+          <a href="/#channels"><span class="ico">声</span>声音设计<span class="cnt">39</span></a>
+          <a href="/#channels"><span class="ico">课</span>影像课堂<span class="cnt">35</span></a>
+        </nav>
+      </div>
+      <div class="side-note">
+        <h3>冬季片单已开放</h3>
+        <p>11 月 20 日至 12 月 31 日，每周二、周五各上新 2 条纪录与短片条目。</p>
+        <a href="/#updates">查看上新节奏 →</a>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-col">
+
+      <!-- 1 概览 -->
+      <section class="block panel overview" id="overview">
+        <div class="block-head">
+          <div>
+            <h2>影像领域概览：<em>五条内容线与当下值得关注的方向</em></h2>
+            <p class="sub">2026 年 11 月片单结构说明</p>
+          </div>
+        </div>
+        <p>影像内容并不是一个笼统的品类。以 BY 影像社区在库的 1,286 条档案为例，<span class="hl">原创短片</span>负责表达密度，通常在 3 至 25 分钟之间完成一次完整的情绪或观念陈述；<span class="hl">纪录长片</span>负责时间厚度，45 分钟以上，允许人物关系缓慢展开；<span class="hl">幕后花絮</span>记录拍摄现场的决策过程；<span class="hl">直播栏目</span>提供实时互动；<span class="hl">创作者访谈</span>则把方法论讲清楚。这五条线互为补充，缺一条就难以判断一个条目到底值不值得投入时间。</p>
+        <p>当前值得关注的具体方向有四个。其一是冬季山地纪录，代表条目《雪线之上》以四季跟拍方式记录一支高山巡护队，11 月 24 日刚完成全集上线；其二是城市夜行题材短片，以《末班地铁的第七节车厢》《凌晨四点的面馆》为代表，多在 12 至 18 分钟之间，用单场景完成叙事；其三是声音设计专题，社区在 11 月新增了「环境声场重建」系列，把纪录片现场收音拆成可听的片段；其四是实验影像单元，2026 年秋季新增 21 条，多为 5 分钟以内的视觉实验，适合在通勤与碎片时间观看。</p>
+        <p>对刚接触这类内容的观众，判断路径其实很朴素：先看时长是否匹配你当下的空档，再看条目属于哪条内容线，最后看更新状态是单集完结还是连载中。连载条目建议等完结后一次性观看，单集完结的短片则可以随时进入。社区在每条档案上都标注了类型、时长、上线日期与当前状态，配合下方的分类筛选可以快速缩小范围。</p>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section class="block panel" id="featured">
+        <div class="block-head">
+          <div>
+            <h2>精选内容推荐</h2>
+            <p class="sub">9 条可立即观看的条目，含类型、看点与热度</p>
+          </div>
+          <a class="link" href="/#channels">按频道浏览 →</a>
+        </div>
+        <div class="card-grid">
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-xueshan-doc11/400/300" width="400" height="300" alt="雪线之上纪录长片剧照" loading="lazy">
+              <span class="badge">纪录长片</span>
+              <span class="score">9.2</span>
+            </div>
+            <div class="body">
+              <h3>雪线之上</h3>
+              <p class="desc">四季跟拍一支高山巡护队，镜头停在补给、修路与夜间值守这些具体动作上，不煽情也不解说，把海拔四千米的日常完整交给画面。</p>
+              <div class="tags"><span>山地纪录</span><span>长片</span><span>全集完结</span></div>
+              <div class="meta"><span>4 集 · 共 186 分钟</span><b>热度 9,842</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-short-metro07/400/300" width="400" height="300" alt="末班地铁的第七节车厢短片剧照" loading="lazy">
+              <span class="badge">原创短片</span>
+              <span class="score">8.7</span>
+            </div>
+            <div class="body">
+              <h3>末班地铁的第七节车厢</h3>
+              <p class="desc">16 分钟单场景叙事，全片发生在一节车厢内，靠三个陌生人的对话推进，结尾没有反转，只把镜头留在关灯后的车窗反光上。</p>
+              <div class="tags"><span>城市夜行</span><span>单场景</span><span>16 分钟</span></div>
+              <div class="meta"><span>单集完结 · 11 月 18 日</span><b>热度 7,310</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-bts-snow08/400/300" width="400" height="300" alt="雪线之上幕后花絮现场照" loading="lazy">
+              <span class="badge">幕后花絮</span>
+              <span class="score">8.4</span>
+            </div>
+            <div class="body">
+              <h3>雪线之上·零下二十度的电池方案</h3>
+              <p class="desc">摄影组讲述低温环境下如何给机器保温、为什么放弃滑轨改用肩扛，附现场收音设备清单，是纪录片拍摄者最实用的一类材料。</p>
+              <div class="tags"><span>拍摄技术</span><span>低温作业</span><span>设备清单</span></div>
+              <div class="meta"><span>22 分钟 · 11 月 22 日</span><b>热度 5,206</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-short-noodle04/400/300" width="400" height="300" alt="凌晨四点的面馆短片剧照" loading="lazy">
+              <span class="badge">原创短片</span>
+              <span class="score">8.9</span>
+            </div>
+            <div class="body">
+              <h3>凌晨四点的面馆</h3>
+              <p class="desc">12 分钟，一间通宵面馆的四个时段，同一张桌子换了四拨客人。台词极少，靠环境声与蒸汽质感撑起整条情绪线。</p>
+              <div class="tags"><span>城市影像志</span><span>环境声场</span><span>12 分钟</span></div>
+              <div class="meta"><span>单集完结 · 11 月 12 日</span><b>热度 6,884</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-talk-director03/400/300" width="400" height="300" alt="创作者访谈栏目录制现场" loading="lazy">
+              <span class="badge">创作者访谈</span>
+              <span class="score">8.6</span>
+            </div>
+            <div class="body">
+              <h3>访谈：一部短片的 47 次剪辑</h3>
+              <p class="desc">导演逐帧复盘《末班地铁》的剪辑过程，讲清哪一场戏被删、为什么删，以及 47 版剪到第 12 版时定下的节奏原则。</p>
+              <div class="tags"><span>剪辑方法</span><span>导演访谈</span><span>流程复盘</span></div>
+              <div class="meta"><span>38 分钟 · 11 月 20 日</span><b>热度 4,915</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-exp-light05/400/300" width="400" height="300" alt="实验影像光的三种停驻画面" loading="lazy">
+              <span class="badge">实验影像</span>
+              <span class="score">8.1</span>
+            </div>
+            <div class="body">
+              <h3>光的三种停驻</h3>
+              <p class="desc">4 分 40 秒的三段式视觉实验，用固定机位记录同一扇窗在清晨、正午、黄昏的光线位移，适合作为影像构图与光比观察的样本。</p>
+              <div class="tags"><span>视觉实验</span><span>固定机位</span><span>短时长</span></div>
+              <div class="meta"><span>4 分 40 秒 · 11 月 8 日</span><b>热度 3,472</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-anim-paper09/400/300" width="400" height="300" alt="纸上城市动画短片画面" loading="lazy">
+              <span class="badge">动画短片</span>
+              <span class="score">8.8</span>
+            </div>
+            <div class="body">
+              <h3>纸上城市</h3>
+              <p class="desc">9 分钟剪纸定格动画，一座城市从白纸到建成再到拆解，全片 2,400 帧逐格拍摄，制作花絮与成片同周上线。</p>
+              <div class="tags"><span>定格动画</span><span>剪纸</span><span>逐格拍摄</span></div>
+              <div class="meta"><span>9 分钟 · 11 月 15 日</span><b>热度 6,133</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-live-thursday02/400/300" width="400" height="300" alt="周四连线直播栏目演播画面" loading="lazy">
+              <span class="badge">直播栏目</span>
+              <span class="score">直播</span>
+            </div>
+            <div class="body">
+              <h3>周四连线：把一场戏拆成 12 个机位</h3>
+              <p class="desc">11 月 26 日 20:00 开播，摄影指导现场演示同一场戏的多机位拆解方案，直播中开放提问，回放次日上架。</p>
+              <div class="tags"><span>多机位</span><span>现场演示</span><span>可提问</span></div>
+              <div class="meta"><span>11 月 26 日 20:00</span><b>预约 2,046</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/by38777-sound-rain06/400/300" width="400" height="300" alt="环境声场重建雨天收音画面" loading="lazy">
+              <span class="badge">声音设计</span>
+              <span class="score">8.3</span>
+            </div>
+            <div class="body">
+              <h3>环境声场重建：雨天街道</h3>
+              <p class="desc">把一条雨天街道拆成 6 层声音：雨打棚顶、轮胎积水、远处人声、店铺门铃、脚步、空调外机，逐层可单独试听。</p>
+              <div class="tags"><span>环境声</span><span>分层试听</span><span>收音素材</span></div>
+              <div class="meta"><span>14 分钟 · 11 月 19 日</span><b>热度 3,988</b></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 3 最新更新 / 动态 -->
+      <section class="block panel" id="updates">
+        <div class="block-head">
+          <div>
+            <h2>最新更新与播出动态</h2>
+            <p class="sub">截至 2026 年 11 月 25 日的条目状态</p>
+          </div>
+          <a class="link" href="/#rank">本周热度榜 →</a>
+        </div>
+        <ul class="updates">
+          <li class="update-item"><span class="time">今天 09:30</span><p class="txt"><strong>《雪线之上》</strong>第 4 集「下撤路线」上线，全片 4K 修复版同步开放，四季跟拍正式完结。<span class="tag-new">NEW</span></p></li>
+          <li class="update-item"><span class="time">今天 08:10</span><p class="txt"><strong>实验影像单元</strong>新增 3 条条目：《窗格》《反射率》《一段没有对白的午后》，均为 5 分钟内短片。</p></li>
+          <li class="update-item"><span class="time">昨天 21:10</span><p class="txt"><strong>《纸上城市》</strong>制作花絮上架，公开 2,400 帧逐格拍摄的原始时间表与灯光布置图。</p></li>
+          <li class="update-item"><span class="time">昨天 18:40</span><p class="txt"><strong>周四连线</strong>第 18 期开放预约，主题为「把一场戏拆成 12 个机位」，11 月 26 日 20:00 开播。</p></li>
+          <li class="update-item"><span class="time">11 月 23 日</span><p class="txt"><strong>《凌晨四点的面馆》</strong>新增导演评论音轨，逐场解释为什么删掉原有的旁白段落。</p></li>
+          <li class="update-item"><span class="time">11 月 22 日</span><p class="txt"><strong>《雪线之上·零下二十度的电池方案》</strong>幕后花絮上线，附完整现场收音与保温设备清单。</p></li>
+          <li class="update-item"><span class="time">11 月 20 日</span><p class="txt"><strong>创作者访谈</strong>更新「一部短片的 47 次剪辑」，导演逐帧复盘剪辑决策。</p></li>
+          <li class="update-item"><span class="time">11 月 19 日</span><p class="txt"><strong>环境声场重建</strong>系列更新「雨天街道」，6 层声音可逐层单独试听。</p></li>
+          <li class="update-item"><span class="time">11 月 18 日</span><p class="txt"><strong>《末班地铁的第七节车厢》</strong>上线，16 分钟单场景叙事，同步开放完整分镜表。</p></li>
+          <li class="update-item"><span class="time">11 月 15 日</span><p class="txt"><strong>《纸上城市》</strong>正片上架，9 分钟剪纸定格，制作周期 7 个月。</p></li>
+          <li class="update-item"><span class="time">11 月 12 日</span><p class="txt"><strong>城市影像志</strong>频道新增「通宵店铺」子专题，首批收录 5 条短片。</p></li>
+          <li class="update-item"><span class="time">11 月 8 日</span><p class="txt"><strong>《光的三种停驻》</strong>上线，三段式固定机位光比观察样本。</p></li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 + 筛选 -->
+      <section class="block panel" id="channels">
+        <div class="block-head">
+          <div>
+            <h2>分类入口</h2>
+            <p class="sub">按类型定位，点击类别可筛选下方条目</p>
+          </div>
+        </div>
+        <div class="cat-filter" role="group" aria-label="条目类型筛选">
+          <button type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" data-filter="short" aria-pressed="false">原创短片</button>
+          <button type="button" data-filter="doc" aria-pressed="false">纪录长片</button>
+          <button type="button" data-filter="bts" aria-pressed="false">幕后花絮</button>
+          <button type="button" data-filter="live" aria-pressed="false">直播栏目</button>
+          <button type="button" data-filter="talk" aria-pressed="false">创作者访谈</button>
+        </div>
+        <div class="cat-grid" id="catGrid">
+          <a class="cat" href="/#featured" data-cat="short"><strong>原创短片</strong><span>3—25 分钟，单场景与多线叙事为主</span><em>412 条 →</em></a>
+          <a class="cat" href="/#featured" data-cat="doc"><strong>纪录长片</strong><span>45 分钟以上，人物关系缓慢展开</span><em>186 条 →</em></a>
+          <a class="cat" href="/#featured" data-cat="bts"><strong>幕后花絮</strong><span>设备方案、现场决策与拍摄复盘</span><em>238 条 →</em></a>
+          <a class="cat" href="/#featured" data-cat="live"><strong>直播栏目</strong><span>每周四 20:00，开放现场提问</span><em>96 条 →</em></a>
+          <a class="cat" href="/#featured" data-cat="talk"><strong>创作者访谈</strong><span>剪辑、摄影与声音的方法论复盘</span><em>74 条 →</em></a>
+          <a class="cat" href="/#featured"><strong>实验影像</strong><span>5 分钟内的视觉与结构实验</span><em>61 条 →</em></a>
+          <a class="cat" href="/#featured"><strong>动画短片</strong><span>定格、剪纸与二维手绘</span><em>88 条 →</em></a>
+          <a class="cat" href="/#featured"><strong>城市影像志</strong><span>通宵店铺、夜行交通与街区记忆</span><em>57 条 →</em></a>
+        </div>
+        <p class="hint" id="filterHint" style="margin-top:12px">当前显示全部条目。选择上方类别可高亮对应卡片范围。</p>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="block panel article" id="article">
+        <h2>深度解析：<span style="color:var(--brand)">短片与纪录长片到底该怎么选</span></h2>
+        <p class="kicker">从时长、叙事密度、更新状态与观看成本四个维度拆解</p>
+
+        <p>很多观众在同一个影像社区里会陷入一种选择困难：短片看起来轻松，但怕太浅；长片看起来有价值，又怕投入两小时之后发现不合口味。这个问题本质上不是「哪个更好」，而是「在什么情况下该选哪个」。下面把四类常见内容放在一起比较，给出可操作的判断依据。</p>
+
+        <h3>一、短片与长片的差别不只是时长</h3>
+        <p>以《末班地铁的第七节车厢》和《雪线之上》为例，前者 16 分钟，后者 186 分钟，但真正的差异在叙事结构。短片通常只保留一个核心冲突，所有镜头服务于这个冲突，因此信息密度高、容错率低——如果前 3 分钟没有建立情境，观众就会离开。纪录长片则允许冗余，允许人物在镜头前沉默、走神、做无关的事，这些「无用」的段落恰恰是长片的价值所在。</p>
+        <p>所以在选择时，可以问自己一个问题：我现在想看一个被精确设计过的情绪，还是想看一段没有被完全修剪的生活？前者选短片，后者选纪录长片。</p>
+
+        <h3>二、四类内容的对照</h3>
+        <table class="compare">
+          <thead>
+            <tr><th>类型</th><th>常见时长</th><th>核心价值</th><th>适合的观看场景</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>原创短片</td><td>3—25 分钟</td><td>单点情绪与结构设计</td><td>通勤、午休、睡前一段完整时间</td></tr>
+            <tr><td>纪录长片</td><td>45—200 分钟</td><td>时间厚度与人物关系</td><td>周末整块时间，建议一次看完</td></tr>
+            <tr><td>幕后花絮</td><td>10—30 分钟</td><td>可复用的拍摄方法与设备方案</td><td>有创作需求时按需查阅</td></tr>
+            <tr><td>创作者访谈</td><td>30—60 分钟</td><td>决策逻辑与失败经验</td><td>看完正片后回看，理解取舍</td></tr>
+          </tbody>
+        </table>
+
+        <h3>三、判断一个条目值不值得投入时间</h3>
+        <p>社区给每条档案标注了类型、时长、上线日期、状态与热度，这五项信息足够完成初筛。具体顺序建议如下：</p>
+        <ul>
+          <li><strong>先看状态。</strong>连载中的条目在第 2、3 集往往节奏偏慢，等完结后一次看完体验更完整；标注「单集完结」的条目可以立即进入。</li>
+          <li><strong>再看时长是否匹配空档。</strong>只剩 20 分钟就不要打开 186 分钟的纪录长片，这不是内容问题，是场景错配。</li>
+          <li><strong>然后看热度与评分的关系。</strong>热度高但评分中等的条目，通常是有话题性但完成度一般；评分高而热度低的，往往是类型片或实验作品，适合有明确偏好的观众。</li>
+          <li><strong>最后看标签。</strong>标签里出现「单场景」「固定机位」「环境声场」这类具体词，说明档案描述是认真的，可信度更高。</li>
+        </ul>
+
+        <div class="quote">一个实用经验：如果你连续两次在某个类型上中途退出，问题通常不在条目质量，而在于这个类型与你当下的注意力状态不匹配。换类型比硬撑更有效。</div>
+
+        <h3>四、同类条目怎么横向比较</h3>
+        <p>同属城市题材的《末班地铁的第七节车厢》与《凌晨四点的面馆》，都发生在夜间、都用单场景，但比较维度不同。前者比较的是对话密度与调度难度，后者比较的是环境声与画面质感。如果你关心叙事结构，看前者；如果你关心声音与影像的质感还原，看后者。同理，同为山地纪录的《雪线之上》与巡护题材的其他条目，比较的重点应放在跟拍周期与拍摄权限上，而不是画面漂亮程度。</p>
+
+        <h3>五、连载条目与单片条目的消费策略</h3>
+        <p>连载条目（如《雪线之上》四季四集）最大的风险是节奏断裂。建议在每集之间留出至少一天，让上一集的信息沉淀，否则容易把四集看成一条模糊的长片，反而浪费了分段设计的意图。单片条目则可以连续观看，但同一天不建议超过三条同类型短片，情绪会互相稀释。</p>
+        <p>另外，幕后花絮与访谈属于「二次内容」，最佳观看时机是在看完正片之后。先看花絮再看正片，会破坏对成片的第一印象；但看完正片后立刻看花絮，能立刻理解某场戏为什么那样拍，记忆留存率最高。</p>
+      </section>
+
+      <!-- 6 观看指南 -->
+      <section class="block panel" id="guide">
+        <div class="block-head">
+          <div>
+            <h2>观看路径与判断指南</h2>
+            <p class="sub">第一次进入影像社区时的推荐顺序</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h4>第一步：用 15 分钟短片建立基线</h4>
+              <p>先看《末班地铁的第七节车厢》或《凌晨四点的面馆》，用一部节奏清晰的短片确认自己是否喜欢这个厂牌的影像语言，成本最低。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>第二步：挑一部完结的纪录长片</h4>
+              <p>如果短片看得下去，直接进入《雪线之上》全集。它已完结、有 4 集分段，适合周末一次看完，也适合每天一集。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>第三步：回看幕后与访谈</h4>
+              <p>正片之后再看《零下二十度的电池方案》和《一部短片的 47 次剪辑》，此时你会带着具体疑问去看，吸收效率远高于先看方法论。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>第四步：进入实验影像与声音专题</h4>
+              <p>《光的三种停驻》与「环境声场重建」系列适合作为日常补充，单条 5—14 分钟，可在碎片时间完成。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>第五步：参与周四连线</h4>
+              <p>11 月 26 日 20:00 的「把一场戏拆成 12 个机位」适合已经看过正片的观众，现场提问能得到更具体的回答。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="block panel faq" id="faq">
+        <div class="block-head">
+          <div>
+            <h2>常见问题</h2>
+            <p class="sub">关于更新节奏、类型差别与观看顺序</p>
+          </div>
+        </div>
+        <details>
+          <summary>《雪线之上》这类纪录长片一般多久更新一集？</summary>
+          <div class="ans">本片采用四季跟拍，按季节分集，每集间隔约 6—8 周。2026 年这一季从 9 月 30 日首播到 11 月 24 日完结，共 4 集。类似的山地纪录长片通常按拍摄周期分集，不会周更，建议关注档案页的状态标注而不是固定日期。</div>
+        </details>
+        <details>
+          <summary>原创短片和实验影像有什么区别？</summary>
+          <div class="ans">原创短片有完整叙事，通常包含人物、冲突与结尾，时长 3—25 分钟；实验影像不追求叙事闭环，重点在视觉结构、光比、剪辑节奏或声音实验，多数在 5 分钟以内。判断方法很简单：看完之后你能复述一个故事，就是短片；只能记住一种感受或一个画面结构，就是实验影像。</div>
+        </details>
+        <details>
+          <summary>第一次接触这个厂牌，从哪个条目开始看比较好？</summary>
+          <div class="ans">推荐从《末班地铁的第七节车厢》开始，16 分钟、单场景、结构清晰，能快速判断是否喜欢这里的影像语言。如果偏好纪实，可以直接看《凌晨四点的面馆》，12 分钟，环境声处理是它的核心看点。</div>
+        </details>
+        <details>
+          <summary>幕后花絮需要先看正片吗？</summary>
+          <div class="ans">强烈建议先看正片。《雪线之上·零下二十度的电池方案》里提到的大量现场决策，只有看过成片才能理解为什么那样取舍。先看花絮会破坏对成片的第一印象，也会让方法论失去具体语境。</div>
+        </details>
+        <details>
+          <summary>城市影像志这个频道主要收录什么？</summary>
+          <div class="ans">收录发生在城市夜间的单场景短片与短纪录，主题集中在通宵店铺、末班交通、街区记忆三类。目前有 57 条，代表条目包括《末班地铁的第七节车厢》《凌晨四点的面馆》，以及 11 月 12 日新增的「通宵店铺」子专题。</div>
+        </details>
+        <details>
+          <summary>同题材的短片应该怎么比较优劣？</summary>
+          <div class="ans">不要只看画面漂亮程度。同题材比较建议看三项：一是信息密度，单位时间内传递了多少有效细节；二是调度难度，是否在有限场景里完成了复杂的人物关系；三是声音处理，环境声是否与画面匹配。这三项在档案页的标签和看点描述里通常都有体现。</div>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="block panel" id="comments">
+        <div class="block-head">
+          <div>
+            <h2>观众评论</h2>
+            <p class="sub">14 条来自条目页的真实讨论摘要</p>
+          </div>
+        </div>
+        <div class="comment-grid">
+          <div class="comment"><div class="who"><span class="avatar" style="background:#1f3ad6">林</span><strong>林间有雾</strong><span>11-25</span></div><p>《雪线之上》第四集下撤那段几乎没台词，但巡护队收绳子的动作重复了三次，我一下就明白了这一季想讲什么。</p><span class="on">评论《雪线之上》第 4 集</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#ff5a3c">周</span><strong>周末不加班</strong><span>11-24</span></div><p>末班地铁那部结尾我一开始觉得太淡，回头重看第二遍才发现车窗反光里有人影，导演是故意的。</p><span class="on">评论《末班地铁的第七节车厢》</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#0f9d6b">陈</span><strong>陈小满</strong><span>11-24</span></div><p>面馆那条的环境声是真的好，戴耳机听蒸汽和碗筷的声音，比画面更有记忆点。</p><span class="on">评论《凌晨四点的面馆》</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#7a4dff">阿</span><strong>阿岚拍片记</strong><span>11-23</span></div><p>电池方案那期对我帮助很大，我们上个月在零下十五度拍外景，机器直接罢工，看完才知道保温袋要留散热口。</p><span class="on">评论《零下二十度的电池方案》</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#e08b00">木</span><strong>木木看片</strong><span>11-23</span></div><p>《纸上城市》的剪纸质感有点粗糙，某些镜头边缘能看到纸屑，但我觉得这反而加分，太干净就不像手工了。</p><span class="on">评论《纸上城市》</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#1f3ad6">半</span><strong>半杯冷萃</strong><span>11-22</span></div><p>47 次剪辑那期信息量太大了，建议做笔记看。第 12 版定下的节奏原则我直接抄到自己的项目里了。</p><span class="on">评论《一部短片的 47 次剪辑》</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#ff5a3c">灯</span><strong>灯下夜读</strong><span>11-21</span></div><p>《光的三种停驻》适合当背景放，也适合逐帧看。正午那段光比处理得比我拍过的任何素材都干净。</p><span class="on">评论《光的三种停驻》</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#0f9d6b">三</span><strong>三号线乘客</strong><span>11-21</span></div><p>城市影像志这个频道定位挺准的，就是更新有点慢，通宵店铺子专题到现在才 5 条。</p><span class="on">评论城市影像志频道</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#7a4dff">辛</span><strong>辛夷路 7 号</strong><span>11-20</span></div><p>雨天街道那 6 层声音我逐个听了一遍，空调外机那层最容易被忽略，但少了它整条街就假了。</p><span class="on">评论「环境声场重建」系列</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#e08b00">路</span><strong>路过的摄影师</strong><span>11-19</span></div><p>整体质量在线，但实验影像单元有几条实在太短，两分钟不到，看完有点没接住。</p><span class="on">评论实验影像单元</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#1f3ad6">夏</span><strong>夏至未至</strong><span>11-18</span></div><p>第一次来是从《末班地铁》入门的，16 分钟刚好，看完顺手把分镜表也下了，做得很细。</p><span class="on">评论《末班地铁的第七节车厢》</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#ff5a3c">南</span><strong>南墙不撞</strong><span>11-17</span></div><p>每周四的直播我基本都跟，比看录播好在能当场提问。上次问多机位预算，回答很实在，没打太极。</p><span class="on">评论周四连线直播栏目</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#0f9d6b">白</span><strong>白噪音爱好者</strong><span>11-15</span></div><p>建议声音设计专题多出一点，现在只有 39 条，不够听。分层试听这个形式很好，希望做成常规栏目。</p><span class="on">评论声音设计频道</span></div>
+          <div class="comment"><div class="who"><span class="avatar" style="background:#7a4dff">慢</span><strong>慢速快门</strong><span>11-14</span></div><p>《纸上城市》制作花絮里的灯光布置图很实用，定格动画的布光跟实拍差别挺大，学到了。</p><span class="on">评论《纸上城市》制作花絮</span></div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="block panel" id="news">
+        <div class="block-head">
+          <div>
+            <h2>相关资讯</h2>
+            <p class="sub">11 月条目上线与社区动态</p>
+          </div>
+        </div>
+        <div class="news-list">
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/by38777-news-snow25/600/400" width="600" height="400" alt="雪线之上全集上线报道配图" loading="lazy">
+            <div>
+              <p class="date">2026-11-24</p>
+              <h3><a href="/#updates">《雪线之上》四季跟拍完结，第 4 集「下撤路线」上线</a></h3>
+              <p>历时 14 个月拍摄的山地纪录长片完成全部更新，4K 修复版同步开放，社区新增完整巡护路线图。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/by38777-news-exp21/600/400" width="600" height="400" alt="实验影像单元秋季新增条目配图" loading="lazy">
+            <div>
+              <p class="date">2026-11-23</p>
+              <h3><a href="/#featured">实验影像单元秋季新增 21 条，5 分钟内短片成主流</a></h3>
+              <p>本轮新增条目平均时长 4 分 12 秒，固定机位与长镜头占比明显上升，反映创作者对结构实验的兴趣回升。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/by38777-news-live18/600/400" width="600" height="400" alt="周四连线第十八期直播预告配图" loading="lazy">
+            <div>
+              <p class="date">2026-11-22</p>
+              <h3><a href="/#featured">周四连线第 18 期定档 11 月 26 日，主题为多机位拆解</a></h3>
+              <p>摄影指导将现场演示同一场戏的 12 机位方案，直播开放提问，回放次日上架。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/by38777-news-city12/600/400" width="600" height="400" alt="城市影像志通宵店铺子专题配图" loading="lazy">
+            <div>
+              <p class="date">2026-11-12</p>
+              <h3><a href="/#channels">城市影像志新增「通宵店铺」子专题，首批收录 5 条短片</a></h3>
+              <p>专题聚焦凌晨营业的面馆、便利店与修车铺，统一采用单场景与现场收音，不设旁白。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/by38777-news-sound19/600/400" width="600" height="400" alt="环境声场重建雨天街道上线配图" loading="lazy">
+            <div>
+              <p class="date">2026-11-19</p>
+              <h3><a href="/#featured">「环境声场重建」更新雨天街道，6 层声音可单独试听</a></h3>
+              <p>该系列把城市声音拆成可复用素材，本轮新增雨打棚顶、轮胎积水与店铺门铃三层。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/by38777-news-comment23/600/400" width="600" height="400" alt="导演评论音轨上线配图" loading="lazy">
+            <div>
+              <p class="date">2026-11-23</p>
+              <h3><a href="/#comments">《凌晨四点的面馆》上线导演评论音轨，解释旁白删除原因</a></h3>
+              <p>导演逐场说明为何放弃原有旁白，并在评论音轨中公开两版开场剪辑的差异。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="block panel" id="related">
+        <div class="block-head">
+          <div>
+            <h2>相关推荐</h2>
+            <p class="sub">延伸方向与具体条目索引</p>
+          </div>
+        </div>
+        <div class="rec-tags">
+          <a href="/#featured">单场景叙事短片 <span class="n">36</span></a>
+          <a href="/#featured">高山巡护题材 <span class="n">12</span></a>
+          <a href="/#featured">定格与剪纸动画 <span class="n">24</span></a>
+          <a href="/#featured">环境声场重建 <span class="n">6 层</span></a>
+          <a href="/#featured">固定机位长镜头 <span class="n">41</span></a>
+          <a href="/#featured">低温拍摄设备方案 <span class="n">9</span></a>
+          <a href="/#featured">通宵店铺子专题 <span class="n">5</span></a>
+          <a href="/#featured">剪辑版本复盘 <span class="n">17</span></a>
+        </div>
+      </section>
+
+      <!-- 11 榜单 -->
+      <section class="block panel" id="rank">
+        <div class="block-head">
+          <div>
+            <h2>本周热度榜</h2>
+            <p class="sub">统计区间 2026-11-19 至 2026-11-25</p>
+          </div>
+        </div>
+        <div class="rank-list">
+          <div class="rank-item"><span class="rank-no">1</span><div class="info"><strong>雪线之上</strong><span>纪录长片 · 4 集完结 · 评分 9.2</span></div><span class="num">9,842</span></div>
+          <div class="rank-item"><span class="rank-no">2</span><div class="info"><strong>末班地铁的第七节车厢</strong><span>原创短片 · 16 分钟 · 评分 8.7</span></div><span class="num">7,310</span></div>
+          <div class="rank-item"><span class="rank-no">3</span><div class="info"><strong>凌晨四点的面馆</strong><span>原创短片 · 12 分钟 · 评分 8.9</span></div><span class="num">6,884</span></div>
+          <div class="rank-item"><span class="rank-no">4</span><div class="info"><strong>纸上城市</strong><span>动画短片 · 9 分钟 · 评分 8.8</span></div><span class="num">6,133</span></div>
+          <div class="rank-item"><span class="rank-no">5</span><div class="info"><strong>零下二十度的电池方案</strong><span>幕后花絮 · 22 分钟 · 评分 8.4</span></div><span class="num">5,206</span></div>
+          <div class="rank-item"><span class="rank-no">6</span><div class="info"><strong>一部短片的 47 次剪辑</strong><span>创作者访谈 · 38 分钟 · 评分 8.6</span></div><span class="num">4,915</span></div>
+          <div class="rank-item"><span class="rank-no">7</span><div class="info"><strong>环境声场重建：雨天街道</strong><span>声音设计 · 14 分钟 · 评分 8.3</span></div><span class="num">3,988</span></div>
+          <div class="rank-item"><span class="rank-no">8</span><div class="info"><strong>光的三种停驻</strong><span>实验影像 · 4 分 40 秒 · 评分 8.1</span></div><span class="num">3,472</span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="side-right">
+      <div class="panel side-search">
+        <div class="panel-head" style="padding:0 0 10px;border-bottom:0">
+          <h2>查找条目</h2>
+        </div>
+        <div class="field">
+          <input type="search" id="sideSearch" placeholder="输入条目或关键词" aria-label="查找条目">
+          <button type="button" id="sideSearchBtn">查找</button>
+        </div>
+        <p class="hint" id="sideHint">可搜索：雪线之上、面馆、纸上城市、环境声、多机位</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>正在连载</h2><span class="mark">3 部</span></div>
+        <ul class="mini-list">
+          <li><a href="/#featured"><strong>雪线之上</strong><span>4 集完结 · 11 月 24 日全集上线</span></a></li>
+          <li><a href="/#featured"><strong>周四连线 第 18 期</strong><span>11 月 26 日 20:00 开播</span></a></li>
+          <li><a href="/#featured"><strong>环境声场重建</strong><span>本轮更新「雨天街道」6 层声音</span></a></li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>条目时间线</h2><span class="mark">11 月</span></div>
+        <div class="timeline">
+          <div class="tl-item"><time>11-24</time><strong>《雪线之上》第 4 集</strong><span>四季跟拍完结</span></div>
+          <div class="tl-item"><time>11-22</time><strong>零下二十度电池方案</strong><span>幕后花絮上线</span></div>
+          <div class="tl-item"><time>11-20</time><strong>47 次剪辑访谈</strong><span>剪辑复盘开放</span></div>
+          <div class="tl-item"><time>11-19</time><strong>雨天街道声场</strong><span>6 层声音试听</span></div>
+          <div class="tl-item"><time>11-15</time><strong>《纸上城市》正片</strong><span>9 分钟定格动画</span></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>可信度分层</h2><span class="mark">说明</span></div>
+        <ul class="mini-list">
+          <li><a href="/#article"><strong>实拍档案</strong><span>附现场设备与拍摄周期记录</span></a></li>
+          <li><a href="/#article"><strong>方法复盘</strong><span>含失败版本与修改原因</span></a></li>
+          <li><a href="/#article"><strong>视觉实验</strong><span>以结构与光比为主要看点</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="#1f3ad6"/>
+            <path d="M15 12.5v15l13-7.5-13-7.5Z" fill="#ffd84d"/>
+          </svg>
+          <span class="brand-text">
+            <strong>www.by38777.com</strong>
+            <span>BY VIDEO STUDIO</span>
+          </span>
+        </div>
+        <p>BY 影像工作室的原创影像社区，收录原创短片、纪录长片、幕后花絮、直播栏目与创作者访谈五条内容线，按类型、时长与更新状态逐条整理。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="/#featured">原创短片</a></li>
+          <li><a href="/#featured">纪录长片</a></li>
+          <li><a href="/#featured">幕后花絮</a></li>
+          <li><a href="/#featured">直播栏目</a></li>
+          <li><a href="/#channels">城市影像志</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>阅读与参考</h4>
+        <ul>
+          <li><a href="/#overview">影像领域概览</a></li>
+          <li><a href="/#article">类型对照解析</a></li>
+          <li><a href="/#guide">观看路径指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#rank">本周热度榜</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>社区动态</h4>
+        <ul>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#related">延伸方向</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 www.by38777.com · BY 影像工作室 保留所有权利</span>
+      <span>条目数据统计截至 2026 年 11 月 25 日 · 评分与热度为社区示例数据</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端导航 */
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('navMain');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 分类筛选：高亮对应卡片 */
+  var filterBtns = document.querySelectorAll('.cat-filter button');
+  var cards = document.querySelectorAll('#featured .card');
+  var hint = document.getElementById('filterHint');
+  var map = {
+    short: '原创短片',
+    doc: '纪录长片',
+    bts: '幕后花絮',
+    live: '直播栏目',
+    talk: '创作者访谈'
+  };
+  function applyFilter(key){
+    var matched = 0;
+    cards.forEach(function(card){
+      var badge = card.querySelector('.badge');
+      var name = badge ? badge.textContent.trim() : '';
+      var show = (key === 'all') || (map[key] === name);
+      card.style.display = show ? '' : 'none';
+      if(show) matched++;
+    });
+    if(hint){
+      hint.textContent = key === 'all'
+        ? '当前显示全部条目。选择上方类别可高亮对应卡片范围。'
+        : '已筛选「' + map[key] + '」，共 ' + matched + ' 条条目。再次点击「全部」恢复。';
+    }
+  }
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+
+  /* 简单本地搜索：滚动到匹配内容并高亮 */
+  function normalize(s){ return (s || '').toLowerCase().replace(/\s+/g,''); }
+  function searchAndFocus(input, hintEl){
+    var q = normalize(input.value);
+    if(!q){
+      if(hintEl){ hintEl.className = 'hint err'; hintEl.textContent = '请输入条目名或关键词，例如「雪线之上」。'; }
+      return;
+    }
+    var targets = document.querySelectorAll('#featured .card h3, #updates .update-item, #rank .rank-item .info strong, #related .rec-tags a');
+    var found = null;
+    for(var i=0;i<targets.length;i++){
+      if(normalize(targets[i].textContent).indexOf(q) !== -1){ found = targets[i]; break; }
+    }
+    if(found){
+      var host = found.closest('article, li, a, div') || found;
+      host.scrollIntoView({behavior:'smooth', block:'center'});
+      host.style.transition = 'box-shadow .3s';
+      host.style.boxShadow = '0 0 0 3px rgba(255,90,60,.55)';
+      setTimeout(function(){ host.style.boxShadow = ''; }, 1800);
+      if(hintEl){ hintEl.className = 'hint'; hintEl.textContent = '已定位到匹配条目。'; }
+    }else{
+      if(hintEl){ hintEl.className = 'hint err'; hintEl.textContent = '没有找到「' + input.value.trim() + '」，可试试「面馆」「纸上城市」「环境声」。'; }
+    }
+  }
+  var topSearch = document.getElementById('topSearch');
+  var topBtn = document.getElementById('topSearchBtn');
+  if(topBtn && topSearch){
+    topBtn.addEventListener('click', function(){ searchAndFocus(topSearch, document.getElementById('sideHint')); });
+    topSearch.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); searchAndFocus(topSearch, document.getElementById('sideHint')); }
+    });
+  }
+  var sideSearch = document.getElementById('sideSearch');
+  var sideBtn = document.getElementById('sideSearchBtn');
+  var sideHint = document.getElementById('sideHint');
+  if(sideBtn && sideSearch){
+    sideBtn.addEventListener('click', function(){ searchAndFocus(sideSearch, sideHint); });
+    sideSearch.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); searchAndFocus(sideSearch, sideHint); }
+    });
+  }
+})();
+</script>
+</body>
+  </html>
